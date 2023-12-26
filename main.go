@@ -21,7 +21,7 @@ func genSnils(c *gin.Context) {
     var remainder int = 0
     for i := 9; i > 0; i-- {
         digit = rand.Intn(10)
-        thesum = thesum + digit
+        thesum = thesum + digit*i
         if (i == 6) || (i == 3) {
             snils = snils + "-" + strconv.Itoa(digit)
         } else {
